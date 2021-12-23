@@ -1,0 +1,101 @@
+package org.test;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByClassName;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Sample {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\eclipse-workspace\\Selenium\\drivers\\chromedriver.exe");
+		WebDriver ob=new ChromeDriver();
+		ob.get("https://www.facebook.com/");
+		WebElement txtUser=ob.findElement(By.xpath("//input[@id='email']"));
+        txtUser.sendKeys("facebook");
+        WebElement txtPass=ob.findElement(By.xpath("//input[@id='pass']"));
+        txtPass.sendKeys("1234567");
+         
+	}
+	
+}
+
+
+package org.selenium.facebook;
+
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.By.ByClassName;
+	import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.chrome.ChromeDriver;
+
+	public class SeleniumFacebookAttribute {
+
+		public static void main(String[] args) {
+			
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\eclipse-workspace\\Selenium\\drivers\\chromedriver.exe");
+			WebDriver ob=new ChromeDriver();
+			ob.get("https://www.facebook.com/");
+			WebElement txtUser=ob.findElement(By.xpath("//h2[contains(text(),'helps you')]"));
+			String strText =txtUser.getText();
+			System.out.println(strText);
+
+			WebElement attributeValue=ob.findElement(By.xpath("//input[@name='email']"));
+			String strAttribute = attributeValue.getAttribute("class");
+			System.out.println(strAttribute);
+
+			
+	        
+		}
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package org.selenium.tutorial;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TutorialLogin {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\eclipse-workspace\\SeleniumAttribute\\drivers\\chromedriver.exe");
+		WebDriver ob=new ChromeDriver();
+		ob.get("https://www.tutorialspoint.com/market/login.jsp?v=1.3");
+
+		WebElement txtUser=ob.findElement(By.id("user_email"));
+        txtUser.sendKeys("prasanna10mca@gmail.com");
+       
+        
+        WebElement txtPass=ob.findElement(By.id("user_password"));
+        txtPass.sendKeys("123456");
+
+        WebElement loginBtn=ob.findElement(By.id("user_login"));
+        loginBtn.click();
+	}
+
+}
+
