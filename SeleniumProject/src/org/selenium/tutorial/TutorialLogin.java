@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TutorialLogin {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\eclipse-workspace\\SeleniumAttribute\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\SeleniumProject\\drivers\\chromedriver.exe");
 		WebDriver ob=new ChromeDriver();
 		ob.get("https://www.tutorialspoint.com/market/login.jsp?v=1.3");
 

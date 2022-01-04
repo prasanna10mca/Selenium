@@ -1,5 +1,5 @@
 package org.test;
-//Naveen Edited this document
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.By.ByClassName;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +17,7 @@ public class Sample {
         txtUser.sendKeys("facebook");
         WebElement txtPass=ob.findElement(By.xpath("//input[@id='pass']"));
         txtPass.sendKeys("1234567");
-         
+        
 	}
 	
 }
